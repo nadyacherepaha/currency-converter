@@ -1,0 +1,174 @@
+.converter-card {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #d4d4d4;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    &__section {
+        width: 100%;
+
+        &--amount {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        &--currencies {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    &__label {
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: 600;
+        color: #0a0a0a;
+    }
+
+    &__amount-input {
+        width: 100%;
+        padding: 12px 12px;
+        border-radius: 8px;
+        border: 1px solid #d4d4d4;
+        background: #fafafa;
+        font-size: 14px;
+        line-height: 17px;
+        color: #0a0a0a;
+        outline: none;
+        text-align: center;
+
+        &:focus {
+            border-color: #1447e6;
+            box-shadow: 0 0 0 1px rgba(20, 71, 230, 0.1);
+            background: #ffffff;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    &__field {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__field-label {
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: 600;
+        color: #0a0a0a;
+    }
+
+    &__swap {
+        width: 42px;
+        height: 42px;
+        border: none;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 12px;
+    }
+
+    &__swap-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.currency-select {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 12px;
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+    background: #fafafa;
+    cursor: pointer;
+    text-align: left;
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        border: 1px solid #bedbff;
+        background: #eff6ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #1447e6;
+    }
+
+    &__meta {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    &__code {
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 600;
+        color: #0a0a0a;
+    }
+
+    &__name {
+        font-size: 12px;
+        line-height: 15px;
+        color: #737373;
+    }
+}
+
+@media (max-width: 768px) {
+    .converter-card {
+        padding: 20px 16px;
+        gap: 24px;
+
+        &__amount-input {
+            width: 100%;
+        }
+
+        &__section--currencies {
+            gap: 16px;
+        }
+
+        &__row {
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+        }
+
+        &__field {
+            width: 100%;
+        }
+
+        .currency-select {
+            width: 100%;
+            padding: 4px 8px;
+        }
+
+        &__swap {
+            width: 42px;
+            height: 42px;
+            padding: 12px;
+        }
+    }
+}
