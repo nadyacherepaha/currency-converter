@@ -34,6 +34,16 @@ export function CurrencyConverterPage() {
                         <span className="converter-page__refresh-text">Refresh rates</span>
                     </button>
                 </section>
+
+                <section className="converter-page__content">
+                    <div className="converter-page__column converter-page__column--form">
+                        <ConverterPanel />
+                    </div>
+
+                    <div className="converter-page__column converter-page__column--result">
+                        <ConversionResultPanel />
+                    </div>
+                </section>
             </div>
         </div>
     );
