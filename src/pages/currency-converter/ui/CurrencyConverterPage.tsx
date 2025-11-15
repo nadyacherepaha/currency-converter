@@ -4,8 +4,15 @@ import online from 'assets/svg/online.svg';
 import clock from 'assets/svg/clock.svg';
 import refresh from 'assets/svg/refresh.svg';
 import './currency-converter-page.scss';
+import { useExchangeRates } from 'features/exchange-rates/model/useExchangeRates';
 
 export function CurrencyConverterPage() {
+    const { error } = useExchangeRates({ base: 'EUR' });
+
+    if (error) {
+        console.error('Failed to load exchange rates', error);
+    }
+
     return (
         <div className="converter-page">
             <div className="converter-page__inner">
