@@ -14,6 +14,7 @@ export function ConverterPanel() {
                     type="text"
                     placeholder="1"
                     value="1"
+                    onChange={() => {}}
                 />
             </div>
 

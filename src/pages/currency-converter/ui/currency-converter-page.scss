@@ -53,9 +53,37 @@
         font-size: 12px;
         line-height: 15px;
         font-weight: 600;
-        background: #f0fdf4;
-        border: 1px solid #b9f8cf;
         gap: 4px;
+    }
+
+    .status-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 8px;
+        gap: 4px;
+
+        border-radius: 8px;
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: 600;
+
+        &--online {
+            background: #f0fdf4;
+            border: 1px solid #b9f8cf;
+            color: #008236;
+        }
+
+        &--offline {
+            background: #fef2f2;
+            border: 1px solid #ffc9c9;
+            color: #c10007;
+        }
+
+        &__icon {
+            width: 12px;
+            height: 12px;
+            flex-shrink: 0;
+        }
     }
 
     &__status-text {
@@ -127,6 +155,15 @@
         }
 
         &--result {
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .converter-page {
+        &__inner {
+            max-width: 700px;
+            padding: 18px 16px;
         }
     }
 }
